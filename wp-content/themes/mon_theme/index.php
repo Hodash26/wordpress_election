@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php get_header(); ?>
+
 </body>
 </html>
