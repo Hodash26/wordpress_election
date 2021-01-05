@@ -23,8 +23,6 @@
     footer {
         width: 100%;
         background-color: #1637AD;
-        position: absolute;
-        bottom: 0;
     }
     .blog-footer--content {
         display: flex;
