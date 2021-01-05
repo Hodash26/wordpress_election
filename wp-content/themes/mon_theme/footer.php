@@ -18,10 +18,13 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
     }
     footer {
         width: 100%;
         background-color: #1637AD;
+        position: absolute;
+        bottom: 0;
     }
     .blog-footer--content {
         display: flex;
