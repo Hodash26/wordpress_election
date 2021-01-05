@@ -7,3 +7,65 @@ Description: Thème personnalisé sur le thème des elections des meilleurs chef
 Requires at least: WordPress 5.0
 Version: 1.0
 */
+
+body {
+    margin: 0;
+    font-family: "montserrat", serif;
+}
+
+.text-container {
+    height:fit-content;
+    margin-left: 150px;
+    margin-right: 45%;
+    position: relative;
+}
+
+h2 {
+    margin-top: 0;
+    color: white;
+    font-size: 29px;
+    padding-top: 15%;
+    text-align: center;
+    z-index: 10;
+}
+
+p {
+    color: white;
+    margin-top: 50px;
+}
+
+.edition {
+    text-align: center;
+    font-size: 25px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.container {
+    background-image: url("./img/background-image.png");
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container::before {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    content: "";
+}
+
+@media screen and (max-width: 960px) {
+
+    .container {
+        height: 100wh;
+    }
+
+}

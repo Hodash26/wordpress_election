@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/css/header.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). '/style.css' ?>">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -21,11 +23,20 @@
                 <li><a href="<?php bloginfo('url'); ?>/resultats/">Résultats</a></li>
             </ul>
         </div>
+        <div class="nav-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-content--overlay"></div>
     </div>    
     </nav>
 
 <style>
-
+body {
+    position: relative;
+    min-height: 100vh;
+}
 .nav {
     width: 100%;
     background-color: #1637AD;
@@ -34,22 +45,122 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1000px;
+        max-width: 80%;
         margin: 0 auto;
-        height: 300px;
+        height: 100px;
 }
-
+.nav .nav-content .nav-content--img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 20;
+}
+.nav .nav-content .nav-content--nav {
+    z-index: 20;
+}
 .nav .nav-content .nav-content--nav ul {
     display: flex;
 }
 .nav .nav-content .nav-content--nav ul li {
     list-style: none;
+    margin: 0 30px;
 }
 .nav .nav-content .nav-content--nav ul li a {
     text-decoration: none;
+    color: #fff;
 }
 
+
+
+.nav-button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    z-index: 20;
+}
+.nav-button span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+}
+.nav-button span:first-child {
+    top: 0;
+}
+.nav-button span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-button span:nth-child(3) {
+    bottom: 0;
+}
+.nav-button.nav-button_active span:first-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.nav-button.nav-button_active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-button.nav-button_active span:last-child {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+
+.nav-content--overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1637AD;
+    display: none;
+}
+.nav-content--overlay.nav-content--overlay_active {
+    display: block;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-button {
+        display: block;
+    }
+    .nav-content--nav {
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        transform: translateY(-50%);
+    }
+
+    .nav-content--nav.nav-content--nav_active {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nav-content--nav ul {
+        flex-direction: column;
+    }
+    .nav .nav-content .nav-content--nav ul li {
+        margin: 30px;
+    }
+    .nav .nav-content .nav-content--nav ul li a {
+        font-size: 20px;
+    }
+}
 </style>
 
-</body>
-</html>
+<script>
+
+let burgerButton = document.querySelector('.nav-button');
+let menuOverlay = document.querySelector('.nav-content--overlay');
+let navContent = document.querySelector('.nav-content--nav');
+
+
+burgerButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    navContent.classList.toggle('nav-content--nav_active');
+    menuOverlay.classList.toggle('nav-content--overlay_active');
+    burgerButton.classList.toggle('nav-button_active');
+});
+</script>
