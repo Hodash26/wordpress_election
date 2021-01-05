@@ -51,14 +51,5 @@
 
 </style>
 
-<<<<<<< HEAD
-=======
-    <header>
-        <div class="header-center">
-            <h1>ELECT</h1>
-        </div>
-    </header>
-    
->>>>>>> c411f1b130fd27de02b7ca24f63dcbfd656ad489
 </body>
 </html>
