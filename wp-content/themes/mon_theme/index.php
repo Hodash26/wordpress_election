@@ -25,4 +25,3 @@ if ( have_posts() ) :
 endif; 
 ?>
 
-        <?php get_footer(); ?>

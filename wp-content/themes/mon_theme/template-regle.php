@@ -28,4 +28,3 @@ Template Name: Règle
         <p class="text-conditions">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eligendi doloremque itaque mollitia, officiis a dignissimos aperiam, sequi iusto id quas error aliquid consequuntur in provident dolorem molestiae nisi expedita?</p>
     </div>
 
-<?php get_footer(); ?>

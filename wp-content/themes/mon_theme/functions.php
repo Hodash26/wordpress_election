@@ -20,5 +20,6 @@ function mytheme_scripts() {
     
 }
 add_action('wp_enqueue_scripts', 'mytheme_scripts');
+register_nav_menu( 'primary', 'Primary Menu' );
 
 ?>

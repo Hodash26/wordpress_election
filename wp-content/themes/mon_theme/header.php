@@ -15,10 +15,8 @@
         <div class="nav-content--img"></div>
         <div class="nav-content--nav">
             <ul>
-                <li><a href="<?php bloginfo('url'); ?>">Accueil</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/regles/">Règles</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/candidats/">Liste des candidats</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/resultats/">Résultats</a></li>
+            <?php wp_nav_menu(); ?>
+            
             </ul>
         </div>
         <div class="nav-button">
