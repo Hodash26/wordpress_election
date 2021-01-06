@@ -68,4 +68,39 @@ p {
         height: 100wh;
     }
 
+    h2 {
+        font-size: 32px;
+    }
+
+    .edition {
+        font-size: 30px;
+    }
+
+    .text-container {
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .edition {
+        font-size: 26px;
+    }
+
+    .justify {
+        font-size: 15px;
+    }
+
+    .container {
+        height: fit-content;
+        padding-bottom: 5vh;
+    }
+
+    
 }
