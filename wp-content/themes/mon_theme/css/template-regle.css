@@ -1,0 +1,43 @@
+.container-rules {
+    width: 90%;
+    margin: auto;
+}
+
+.container-img-rules {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-rules {
+    text-align: justify;
+    font-size: 22px;
+    justify-content: flex-start;
+    margin: 0 0 0 5vh;
+}
+
+p {
+    color: #707070;
+}
+
+h1 {
+    text-align: end;
+    margin-top: 5vh;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 5vh;
+
+}
+
+.text-conditions { 
+    margin-left: 5vh;
+    margin-right: 5vh;
+    text-align: justify;
+    font-size: 22px;
+}
+
+h1, h2 {
+    color: black;
+}
