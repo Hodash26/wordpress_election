@@ -9,7 +9,7 @@ Template Name: Règle
 
     <div class="container-rules">
 
-        <h1>
+        <h1 class="title-rule">
             Règles
         </h1>
         <div class="container-img-rules">
@@ -22,9 +22,11 @@ Template Name: Règle
                  Maxime in veritatis amet voluptates hic dicta incidunt esse, fuga quibusdam molestiae totam, modi illo rerum!</p>
         </div>
     
-        <h2>Conditions</h2>
+        <h2 class="title-rule">Conditions</h2>
 
         <p class="text-conditions">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, quisquam explicabo voluptate id omnis repellendus voluptatum quae eligendi doloribus reiciendis temporibus vitae est fugit officiis vero, ipsam impedit qui. Ad.</p>
         <p class="text-conditions">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eligendi doloremque itaque mollitia, officiis a dignissimos aperiam, sequi iusto id quas error aliquid consequuntur in provident dolorem molestiae nisi expedita?</p>
     </div>
+
+    <?php get_footer(); ?>
 

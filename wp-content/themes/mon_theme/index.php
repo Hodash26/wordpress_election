@@ -2,10 +2,10 @@
 
         <div class="container">
             <div class="text-container">
-                <h2>L'éléction du plus grand patissiers de France</h2>
+                <h2 class="white-home">L'éléction du plus grand patissiers de France</h2>
                 
-                <p class="edition">1ère édition</p>
-                <p class="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni veritatis expedita quasi ad quos laboriosam cum veniam voluptatem, nesciunt dolorem.
+                <p class="edition white-home">1ère édition</p>
+                <p class="justify white-home">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni veritatis expedita quasi ad quos laboriosam cum veniam voluptatem, nesciunt dolorem.
                     A, quo nulla placeat error, perspiciatis beatae nostrum voluptates inventore, est nisi reiciendis! Porro modi quidem,
                     dolores debitis harum molestias esse animi excepturi laboriosam labore, accusantium eligendi nostrum dignissimos natus?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corrupti autem odio reiciendis voluptatibus cupiditate expedita in reprehenderit.
@@ -16,6 +16,8 @@
             </div>
         </div>
 
+        <div class="loop">
+
         <?php 
 if ( have_posts() ) : 
     while ( have_posts() ) : the_post(); 
@@ -24,4 +26,9 @@ if ( have_posts() ) :
     endwhile; 
 endif; 
 ?>
+
+        </div>
+
+<?php get_footer(); ?>
+
 
